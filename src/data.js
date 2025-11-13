@@ -1,9 +1,11 @@
 import HeroImage from "/assets/hero-img.webp";
 import PotoProfil from "../public/assets/potoprofil/poto-majid.jpg"
+import PotoQuote from '../public/assets/potoprofil/poto-majid2.jpg'
 
 const Image = {
   HeroImage,
   PotoProfil,
+  PotoQuote,
 };
 
 export default Image;
