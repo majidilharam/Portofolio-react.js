@@ -1,6 +1,7 @@
 import DataImage from './data'
 import { listTools, listProyek } from './data'
 
+
 function App() {
 
 
@@ -21,7 +22,7 @@ function App() {
             <a href="#proyek" className='bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600'>Lihat Proyek <i className="ri-arrow-down-line"></i></a>
           </div>
         </div>
-        <img src={DataImage.HeroImage} alt="Hero Image" className='w-[500px] md:ml-auto animate__animated animate__fadeInBottomLeft animate__delay-4s' loading='lazy' />
+        <img src={DataImage.PotoProfil} alt="Poto Profil" className='w-[500px]  object-fit:contain md:ml-auto rounded-3xl  animate__animated animate__fadeInBottomLeft animate__delay-4s' loading='lazy' />
       </div>
 
       {/* about */}

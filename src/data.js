@@ -1,7 +1,9 @@
 import HeroImage from "/assets/hero-img.webp";
+import PotoProfil from "../public/assets/potoprofil/poto-majid.jpg"
 
 const Image = {
   HeroImage,
+  PotoProfil,
 };
 
 export default Image;
