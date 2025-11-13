@@ -18,14 +18,14 @@ function App() {
           </p>
           <div className='flex items-center sm:gap-4 gap-2'>
             <a href="#" className='bg-violet-700 p-4 rounded-2xl hover:bg-violet-600'>Download CV <i className="ri-download-line ri-lg"></i></a>
-            <a href="#" className='bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600'>Lihat Proyek <i className="ri-arrow-down-line"></i></a>
+            <a href="#proyek" className='bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600'>Lihat Proyek <i className="ri-arrow-down-line"></i></a>
           </div>
         </div>
         <img src={DataImage.HeroImage} alt="Hero Image" className='w-[500px] md:ml-auto animate__animated animate__fadeInBottomLeft animate__delay-4s' loading='lazy' />
       </div>
 
       {/* about */}
-      <div className="tentang mt-32 py-10">
+      <div className="tentang mt-32 py-10" id="tentang">
         <div className='xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg'
           data-aos="fade-up" data-aos-duration="1000">
           <img src={DataImage.HeroImage} alt=' Image' className='w-12 rounded-md mb-10 sm:hidden' loading='lazy' />
@@ -78,7 +78,7 @@ function App() {
       {/* about */}
 
       {/* proyek */}
-      <div className='proyek mt-32 py-10'>
+      <div className='proyek mt-32 py-10' id='proyek'>
         <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
           Proyek</h1>
         <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
@@ -109,7 +109,7 @@ function App() {
       {/* proyek */}
 
       {/* Kontak */}
-      <div className="kontak mt-32 sm:p-10 p-0">
+      <div className="kontak mt-32 sm:p-10 p-0" id='kontak'>
         <h1 className='text-4xl mb-2 font-bold text-center' data-aos="fade-up" data-aos-duration="1000">Kontak</h1>
         <p className='text-base/loose text-center mb-10 opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Mari terhubung dengan saya.</p>
         <form action="https://formsubmit.co/muhammadnurmajid160@gmail.com" method="POST" className='bg-zinc-800 p-10 sm:w-fit w:full mx-auto rounded-md'
