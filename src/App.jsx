@@ -25,8 +25,8 @@ function App() {
       </div>
       {/* about */}
       <div className="tentang mt-32 py-10">
-        <div className='xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg 
-        data-aos="fade-up"'>
+        <div className='xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg' 
+        data-aos="fade-up" data-aos-duration="1000">
           <img src={DataImage.HeroImage} alt=' Image' className='w-12 rounded-md mb-10 sm:hidden' loading='lazy' />
           <p className='text-base/loose mb-10'>
             Hi, pekernalkan saya Muhammad Nur Majid, Saya ingin menjadi Frontend Developer,
