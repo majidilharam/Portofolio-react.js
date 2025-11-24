@@ -5,19 +5,19 @@ const Footer = () => {
             <div className="flex gap-7">
                 <a href="#beranda">Beranda</a>
                 <a href="#tentang">Tentang</a>
-                <a href="#proyek">Proyek</a>
+                <a href="#proyek">Pelatihan</a>
             </div>
             <div className="flex items-center gap-3">
-                <a href="#">
+                <a href="https://github.com/majidilharam">
                     <i className="ri-github-fill ri-2x"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/majiiiidddd_?igsh=MWl4NnV3bDFvMTA1cg==">
                     <i className="ri-instagram-fill ri-2x"></i>
                 </a>
-                <a href="#">
-                    <i className="ri-facebook-fill ri-2x"></i>
+                <a href="https://www.tiktok.com/@majidddddddd_?_r=1&_t=ZS-91fPsvX5lpg">
+                    <i className="ri-tiktok-fill ri-2x"></i>
                 </a>
-                <a href="#">
+                <a href="https://wa.me/qr/XOLN4BV2H6Q4B1">
                     <i className="ri-whatsapp-fill ri-2x"></i>
                 </a>
             </div>
