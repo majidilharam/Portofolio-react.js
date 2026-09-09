@@ -75,6 +75,8 @@ export const listTools = [
 ];
 
 import Proyek1 from "/assets/proyek/Sertifikat-majid.png"
+import Proyek2 from "/assets/proyek/sertifikat-fe.png"
+import Proyek3 from "/assets/proyek/sertifikat-da.png"
 export const listProyek = [
   {
     id: 1,
@@ -83,5 +85,25 @@ export const listProyek = [
     desk: "Master Class: React JS dan Tailwind CSS Website Development",
     tools: ["HTML", "Tailwind CSS", "Javascript"],
     dad: "200",
+    sertifikat: 'https://drive.google.com/file/d/1-cRTAyBrBjU4RjWQZsKTg7bUJRVe2ATe/view?usp=drivesdk' 
   },
+  {
+    id: 2,
+    gambar: Proyek2,
+    nama: "Telah Menyelesaikan",
+    desk: "Intro to Software Engineering",
+    tools: ["HTML", "Tailwind CSS", "Javascript"],
+    dad: "200",
+    sertifikat: 'https://drive.google.com/file/d/1JkJN7fUcQROF98Tx-_bRilMMuaues8wJ/view?usp=drive_link'
+  },
+    {
+    id: 3,
+    gambar: Proyek3,
+    nama: "Telah Menyelesaikan",
+    desk: "Intro to Data Analytics",
+    tools: ["Microsoft Excel", "MySQL", "Microsoft Power BI"],
+    dad: "200",
+    sertifikat: 'https://drive.google.com/file/d/12MSLT5hgK-LyBdCnhR9omjXcgbxKoloh/view?usp=drive_link'
+  },
+
 ];

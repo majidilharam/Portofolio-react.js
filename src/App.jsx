@@ -14,11 +14,12 @@ function App() {
             <q>Do what makes you happy</q>
           </div>
           <h1 className='text-5xl/tight font-bold mb-6'>Hi, Saya Muhammad Nur Majid</h1>
-          <p className='text-base/loose mb-6 opacity-90'>Saya mempunyai ketertarikan dalam bidang Programing, terutama pada
-            pembuatan website, dan saya baru memulai di bidang ini semenjak masuk kuliah.
+          <p className='text-base/loose mb-6 opacity-90'>"Saya seorang pemula yang bersemangat di dunia pengembangan web, dengan fokus membangun
+           antarmuka yang bersih dan fungsional menggunakan React.js.
+           Perjalanan ini dimulai sejak masuk kuliah, dan terus saya asah lewat belajar dan mengerjakan proyek nyata."
           </p>
           <div className='flex items-center sm:gap-4 gap-2'>
-            <a href="https://drive.google.com/file/d/1vf-j105OrZEjEVd6-WuGecgJ5pjpDctt/view?usp=drivesdk" className='bg-blue-300 p-4 rounded-2xl hover:bg-blue-600'> See My CV <i className="ri-download-line ri-lg"></i></a>
+            <a href="https://drive.google.com/file/d/1aiOMKJ2JymQ3gYZ-_btrE0KEGRTza2Mg/view?usp=sharing" className='bg-blue-300 p-4 rounded-2xl hover:bg-blue-600'> See My CV <i className="ri-download-line ri-lg"></i></a>
             <a href="#kontak" className='bg-blue-600 p-4 rounded-2xl hover:bg-blue-900'>Contact Me</a>
           </div>
         </div>
@@ -31,9 +32,8 @@ function App() {
           data-aos="fade-up" data-aos-duration="1000">
           <img src={DataImage.logo1} alt=' Image' className='w-12 rounded-md mb-10 sm:hidden' loading='lazy' />
           <p className='text-base/loose mb-10'>
-            Hi, pekernalkan saya Muhammad Nur Majid, Saya ingin menjadi Frontend Developer,
-            Dan saya sedang belajar membuat web menggunakan react.js,
-            semoga apa yang saya usahakan bisa berbuahkan hasil yang maksimal.
+          Perkenalkan, saya Muhammad Nur Majid — calon Frontend Developer yang sedang mendalami React.js. 
+          Saya percaya proses belajar tidak pernah berhenti, dan setiap baris kode yang saya tulis adalah langkah kecil menuju hasil yang maksimal.
           </p>
           <div className='flex items-center justify-between'>
             <img src={DataImage.logo1} alt=" Image" className='w-12 rounded-md sm:block hidden' loading='lazy' />
@@ -69,34 +69,37 @@ function App() {
       {/* about */}
 
       {/* pelatihan */}
-      <div className='proyek mt-32 py-10' id='proyek'>
-        <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
-          Pelatihan</h1>
-        <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-         Sertifikasi yang diperoleh karena telah menyelesaikannya </p>
-        <div className="proyek-box  mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map(proyek => (
-            <div key={proyek.id} className='p-4 bg-blue-300 rounded-md' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad}>
-              <img src={proyek.gambar} alt="Proyek Image" loading='lazy' />
-              <div>
-                <h1 className='text-2xl font-bold my-4'>{proyek.nama}</h1>
-                <p className='text-base/loose mb-4'>{proyek.desk}</p>
-                <div className='flex flex-wrap gap-2'>
-                  {proyek.tools.map((tool, index) => (
-                    <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 rounded-md font-semibold' key={index}>{tool}</p>
-                  ))}
-                </div>
-                <div className='mt-8 text-center'>
-                  <a href='https://drive.google.com/file/d/1-cRTAyBrBjU4RjWQZsKTg7bUJRVe2ATe/view?usp=drivesdk' className='bg-blue-500 p-3 rounded-lg block border border-white
-                  hover:bg-blue-900'>Lihat Sertifikat</a>
-                </div>
-              </div>
-            </div>
-          ))}
-
+<div className='proyek mt-32 py-10' id='proyek'>
+  <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
+    Pelatihan</h1>
+  <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    Sertifikasi yang diperoleh karena telah menyelesaikannya </p>
+  <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
+    {listProyek.map(proyek => (
+      <div key={proyek.id} className='p-4 bg-blue-300 rounded-md h-full flex flex-col' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad}>
+        <img src={proyek.gambar} alt="Proyek Image" loading='lazy' />
+        <div className='flex flex-col flex-1'>
+          <h1 className='text-2xl font-bold my-4'>{proyek.nama}</h1>
+          <p className='text-base/loose mb-4'>{proyek.desk}</p>
+          <div className='flex flex-wrap gap-2'>
+            {proyek.tools.map((tool, index) => (
+              <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 rounded-md font-semibold' key={index}>{tool}</p>
+            ))}
+          </div>
+          <div className='mt-auto pt-8 text-center'>
+            <a href={proyek.sertifikat}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-blue-500 p-3 rounded-lg block border border-white hover:bg-blue-900'>
+              Lihat Sertifikat
+            </a>
+          </div>
         </div>
       </div>
-      {/* pelatihan */}
+    ))}
+  </div>
+</div>
+{/* pelatihan */}
 
       {/* Kontak */}
       <div className="kontak mt-32 sm:p-10 p-0" id='kontak'>
