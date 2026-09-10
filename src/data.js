@@ -13,7 +13,7 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
+import Tools1 from "/assets/tools/html.webp";
 import Tools2 from "/assets/tools/reactjs.png";
 import Tools3 from "/assets/tools/nextjs.png";
 import Tools4 from "/assets/tools/tailwind.png";
@@ -26,8 +26,8 @@ export const listTools = [
   {
     id: 1,
     gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
+    nama: "Html",
+    ket: "Language",
     dad: "100",
   },
   {
@@ -81,7 +81,7 @@ export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
-    nama: "Telah Menyelesaikan",
+    nama: "Completed",
     desk: "Master Class: React JS dan Tailwind CSS Website Development",
     tools: ["HTML", "Tailwind CSS", "Javascript"],
     dad: "200",
@@ -90,7 +90,7 @@ export const listProyek = [
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Telah Menyelesaikan",
+    nama: "Completed",
     desk: "Intro to Software Engineering",
     tools: ["HTML", "Tailwind CSS", "Javascript"],
     dad: "200",
@@ -99,7 +99,7 @@ export const listProyek = [
     {
     id: 3,
     gambar: Proyek3,
-    nama: "Telah Menyelesaikan",
+    nama: "Completed",
     desk: "Intro to Data Analytics",
     tools: ["Microsoft Excel", "MySQL", "Microsoft Power BI"],
     dad: "200",
@@ -107,3 +107,18 @@ export const listProyek = [
   },
 
 ];
+
+import projects1 from "/assets/projects/story.png"
+
+export const listProjects = [
+  {
+    id: 1,
+    nama: "Story Daily Point",
+    desk: "A daily task tracker that helps users log, organize, and keep track of their to-dos with a clean and simple interface.",
+    gambar: projects1,
+    tools: ["React", "JavaScript", "Tailwind CSS"],
+    demo: "https://story-daily-point.vercel.app/",
+    github: "https://github.com/majidilharam/story-daily-point",
+    dad: "300",
+  }
+]

@@ -1,5 +1,5 @@
 import DataImage from './data'
-import { listTools, listProyek } from './data'
+import { listTools, listProyek, listProjects } from './data'
 
 
 function App() {
@@ -13,10 +13,9 @@ function App() {
             <img src={DataImage.PotoQuote} alt="Hero Image" className='w-10 rounded-md' loading='lazy' />
             <q>Do what makes you happy</q>
           </div>
-          <h1 className='text-5xl/tight font-bold mb-6'>Hi, Saya Muhammad Nur Majid</h1>
-          <p className='text-base/loose mb-6 opacity-90'>"Saya seorang pemula yang bersemangat di dunia pengembangan web, dengan fokus membangun
-           antarmuka yang bersih dan fungsional menggunakan React.js.
-           Perjalanan ini dimulai sejak masuk kuliah, dan terus saya asah lewat belajar dan mengerjakan proyek nyata."
+          <h1 className='text-5xl/tight font-bold mb-6'>Hi, i'm Muhammad Nur Majid</h1>
+          <p className='text-base/loose mb-6 opacity-90'>a Front-End Engineer specializing in React.js. I build responsive,
+           component-based web interfaces with clean and maintainable code, and I'm always looking to take on new challenges that push my skills further.
           </p>
           <div className='flex items-center sm:gap-4 gap-2'>
             <a href="https://drive.google.com/file/d/1aiOMKJ2JymQ3gYZ-_btrE0KEGRTza2Mg/view?usp=sharing" className='bg-blue-300 p-4 rounded-2xl hover:bg-blue-600'> See My CV <i className="ri-download-line ri-lg"></i></a>
@@ -28,27 +27,12 @@ function App() {
 
       {/* about */}
       <div className="tentang mt-32 py-10" id="tentang">
-        <div className='xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-blue-300 rounded-lg'
-          data-aos="fade-up" data-aos-duration="1000">
-          <img src={DataImage.logo1} alt=' Image' className='w-12 rounded-md mb-10 sm:hidden' loading='lazy' />
-          <p className='text-base/loose mb-10'>
-          Perkenalkan, saya Muhammad Nur Majid — calon Frontend Developer yang sedang mendalami React.js. 
-          Saya percaya proses belajar tidak pernah berhenti, dan setiap baris kode yang saya tulis adalah langkah kecil menuju hasil yang maksimal.
-          </p>
-          <div className='flex items-center justify-between'>
-            <img src={DataImage.logo1} alt=" Image" className='w-12 rounded-md sm:block hidden' loading='lazy' />
-            <div className='flex items-center gap-6'>
-              <div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+       
         <div className='tools mt-32'>
           <h1 className='text-4xl/snug font-bold mb-4' data-aos="fade-up" data-aos-duration="1000">
-            Tools yang dipakai</h1>
+            Tools I Use</h1>
           <p className='xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w3/4 w-full text-base/loose opacity-50'
-            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan website</p>
+            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Here are some of the tools I regularly use to build websites</p>
           <div className='tools-box mt-14 grid lg:grid-cols-1 md:grid-cols-3 sm:grid-cols-2 
           grid-cols-1 gap-4'>
 
@@ -68,19 +52,19 @@ function App() {
       </div>
       {/* about */}
 
-      {/* pelatihan */}
+     {/* Certifications */}
 <div className='proyek mt-32 py-10' id='proyek'>
   <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
-    Pelatihan</h1>
+    Certifications</h1>
   <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    Sertifikasi yang diperoleh karena telah menyelesaikannya </p>
+   Certifications earned upon course completion </p>
   <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
     {listProyek.map(proyek => (
       <div key={proyek.id} className='p-4 bg-blue-300 rounded-md h-full flex flex-col' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad}>
-        <img src={proyek.gambar} alt="Proyek Image" loading='lazy' />
+        <img src={proyek.gambar} alt="Certificate" loading='lazy' />
         <div className='flex flex-col flex-1'>
-          <h1 className='text-2xl font-bold my-4'>{proyek.nama}</h1>
-          <p className='text-base/loose mb-4'>{proyek.desk}</p>
+          <h1 className='text-lg font-bold my-4'>{proyek.nama}</h1>
+          <p className='text-xl mb-4'>{proyek.desk}</p>
           <div className='flex flex-wrap gap-2'>
             {proyek.tools.map((tool, index) => (
               <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 rounded-md font-semibold' key={index}>{tool}</p>
@@ -91,7 +75,7 @@ function App() {
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 p-3 rounded-lg block border border-white hover:bg-blue-900'>
-              Lihat Sertifikat
+              View Certificate
             </a>
           </div>
         </div>
@@ -99,38 +83,79 @@ function App() {
     ))}
   </div>
 </div>
-{/* pelatihan */}
+{/* Certifications */}
 
-      {/* Kontak */}
-      <div className="kontak mt-32 sm:p-10 p-0" id='kontak'>
-        <h1 className='text-4xl mb-2 font-bold text-center' data-aos="fade-up" data-aos-duration="1000">Kontak</h1>
-        <p className='text-base/loose text-center mb-10 opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Mari terhubung dengan saya.</p>
-        <form action="https://formsubmit.co/muhammadnurmajid160@gmail.com" method="POST" className='bg-blue-300 p-10 sm:w-fit w:full mx-auto rounded-md'
-          autoComplete='off' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-          <div className='flex flex-col gap-6'>
-            <div className='flex flex-col gap-2'>
-              <label className='font-semibold'>Nama Lengkap</label>
-              <input type="text" name="nama" placeholder='Masukan Nama....'
-                className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required />
-            </div>
-            <div className='flex flex-col gap-2'>
-              <label className='font-semibold'>Email</label>
-              <input type="email" name="email" placeholder='Masukan Email....'
-                className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required />
-            </div>
-            <div className='flex flex-col gap-2'>
-              <label htmlFor='pesan' className='font-semibold'>Pesan</label>
-              <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder='Pesan....'
-                className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required ></textarea>
-            </div>
-            <div className='text-center'>
-              <button type="submit" className='bg-blue-600 p-3 rounded-lg w-full cursor-pointer border
-              border-white hover:bg-blue-900'>Kirim Pesan</button>
-            </div>
+{/* Projects */}
+<div className='proyek mt-32 py-10' id='projects'>
+  <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
+    Projects</h1>
+  <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+   A selection of projects I've built to apply my skills</p>
+  <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
+    {listProjects.map(project => (
+      <div key={project.id} className='p-4 bg-blue-300 rounded-md h-full flex flex-col' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={project.dad}>
+        <img src={project.gambar} alt={project.nama} loading='lazy' className='rounded-md' />
+        <div className='flex flex-col flex-1'>
+          <h1 className='text-lg font-bold my-4'>{project.nama}</h1>
+          <p className='text-base mb-4 opacity-90'>{project.desk}</p>
+          <div className='flex flex-wrap gap-2'>
+            {project.tools.map((tool, index) => (
+              <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 rounded-md font-semibold' key={index}>{tool}</p>
+            ))}
           </div>
-        </form>
+          <div className='mt-auto pt-8 flex gap-3'>
+            <a href={project.demo}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-blue-500 p-3 rounded-lg flex-1 text-center border border-white hover:bg-blue-900'>
+              Live Demo
+            </a>
+            <a href={project.github}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-zinc-700 p-3 rounded-lg flex-1 text-center border border-white hover:bg-zinc-900'>
+              GitHub
+            </a>
+          </div>
+        </div>
       </div>
-      {/* Kontak */}
+    ))}
+  </div>
+</div>
+{/* Projects */}
+
+
+
+     {/* Contact */}
+<div className="kontak mt-32 sm:p-10 p-0" id='kontak'>
+  <h1 className='text-4xl mb-2 font-bold text-center' data-aos="fade-up" data-aos-duration="1000">Contact</h1>
+  <p className='text-base/loose text-center mb-10 opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Let's get in touch.</p>
+  <form action="https://formsubmit.co/muhammadnurmajid160@gmail.com" method="POST" className='bg-blue-300 p-10 sm:w-fit w:full mx-auto rounded-md'
+    autoComplete='off' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+    <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-2'>
+        <label className='font-semibold'>Full Name</label>
+        <input type="text" name="nama" placeholder='Enter your name...'
+          className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required />
+      </div>
+      <div className='flex flex-col gap-2'>
+        <label className='font-semibold'>Email</label>
+        <input type="email" name="email" placeholder='Enter your email...'
+          className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required />
+      </div>
+      <div className='flex flex-col gap-2'>
+        <label htmlFor='pesan' className='font-semibold'>Message</label>
+        <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder='Your message...'
+          className='border border-white focus:outline-none placeholder-white p-2 rounded-md' required ></textarea>
+      </div>
+      <div className='text-center'>
+        <button type="submit" className='bg-blue-600 p-3 rounded-lg w-full cursor-pointer border
+        border-white hover:bg-blue-900'>Send Message</button>
+      </div>
+    </div>
+  </form>
+</div>
+{/* Contact */}
 
     </>
   )
