@@ -88,35 +88,55 @@ function App() {
 {/* Projects */}
 <div className='proyek mt-32 py-10' id='projects'>
   <h1 className='text-center text-4xl font-bold mb-2' data-aos="fade-up" data-aos-duration="1000">
-    Projects</h1>
+    Projects
+  </h1>
   <p className='text-base/loose text-center opacity-50' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-   A selection of projects I've built to apply my skills</p>
+    A selection of projects I've built to apply my skills
+  </p>
+  
   <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
     {listProjects.map(project => (
-      <div key={project.id} className='p-4 bg-blue-300 rounded-md h-full flex flex-col' data-aos="fade-up" data-aos-duration="1000" data-aos-delay={project.dad}>
-        <img src={project.gambar} alt={project.nama} loading='lazy' className='rounded-md' />
+      <div 
+        key={project.id} 
+        className='p-4 bg-blue-300 rounded-md h-full flex flex-col justify-between' 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay={project.dad}
+      >
+        {/* Bagian Atas: Gambar, Judul, Deskripsi, Tools */}
         <div className='flex flex-col flex-1'>
-          <h1 className='text-lg font-bold my-4'>{project.nama}</h1>
-          <p className='text-base mb-4 opacity-90'>{project.desk}</p>
-          <div className='flex flex-wrap gap-2'>
+          {/* Fixed aspect ratio & height untuk gambar */}
+          <div className='w-full h-48 overflow-hidden rounded-md bg-white mb-4'>
+            <img 
+              src={project.gambar} 
+              alt={project.nama} 
+              loading='lazy' 
+              className='w-full h-full object-cover object-top' 
+            />
+          </div>
+
+          <h1 className='text-lg font-bold mb-2'>{project.nama}</h1>
+          <p className='text-base mb-4 opacity-90 leading-relaxed'>{project.desk}</p>
+          
+          <div className='flex flex-wrap gap-2 mb-6'>
             {project.tools.map((tool, index) => (
-              <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 rounded-md font-semibold' key={index}>{tool}</p>
+              <p className='py-1 px-3 border bg-zinc-600 border-zinc-500 text-white rounded-md font-semibold text-xs' key={index}>
+                {tool}
+              </p>
             ))}
           </div>
-          <div className='mt-auto pt-8 flex gap-3'>
-            <a href={project.demo}
+        </div>
+
+        {/* Bagian Bawah: Tombol Aksi */}
+        <div className='mt-auto pt-2 flex gap-3'>
+          <a 
+            href={project.demo}
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-blue-500 p-3 rounded-lg flex-1 text-center border border-white hover:bg-blue-900'>
-              Live Demo
-            </a>
-            <a href={project.github}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='bg-zinc-700 p-3 rounded-lg flex-1 text-center border border-white hover:bg-zinc-900'>
-              GitHub
-            </a>
-          </div>
+            className='bg-blue-500 p-3 rounded-lg flex-1 text-center text-white font-medium border border-white hover:bg-blue-900 transition-colors'
+          >
+            Live Demo
+          </a>
         </div>
       </div>
     ))}

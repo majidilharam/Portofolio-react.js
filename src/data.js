@@ -109,6 +109,7 @@ export const listProyek = [
 ];
 
 import projects1 from "/assets/projects/story.png"
+import projects2 from "/assets/projects/ykk.png"
 
 export const listProjects = [
   {
@@ -120,5 +121,15 @@ export const listProjects = [
     demo: "https://story-daily-point.vercel.app/",
     github: "https://github.com/majidilharam/story-daily-point",
     dad: "300",
-  }
+  }, 
+    {
+    id: 2,
+    nama: "Sistem Cuti Lembur",
+    desk: "An employee leave and overtime management system designed to streamline request submissions, approvals, and logs tracking with role-based access",
+    gambar: projects2,
+    tools: ["React", "JavaScript", "Tailwind CSS", "Supabase"],
+    demo: "https://sistem-cuti-lembur-ptykk.vercel.app/",
+    dad: "300",
+  }, 
+  
 ]
